@@ -34,7 +34,7 @@ foreach t { blue mint green purple sand pink grey } \
         set t $::tks
         proc LoadImages {color {patterns {*.png}}} {
             set themedir [file join [file dirname [info script]] scid]
-            foreach imgdir [list $themedir $themedir$color] { 
+            foreach imgdir [list $themedir $themedir$color] {
                 foreach pattern $patterns {
                     foreach file [glob -directory $imgdir $pattern] {
                         set img [file tail [file rootname $file]]
@@ -49,10 +49,10 @@ foreach t { blue mint green purple sand pink grey } \
 
         variable I
         array set I [LoadImages $t *.png]
-        
+
         variable colors
         array set colors {
-            background     "#d8d8d8"    
+            background     "#d8d8d8"
             frame          "#d8d8d8"            lighter        "#fcfcfc"
             dark           "#c8c8c8"            troughborder   "#a7a7a7"
             darkest        "#cacaca"            selectbg       "#3d3d3d"
@@ -186,12 +186,12 @@ foreach t { blue mint green purple sand pink grey } \
             ttk::style map TEntry \
                 -fieldbackground [list readonly $colors(frame)] -bordercolor [list focus $colors(eborder)] \
                 -lightcolor [list focus $colors(entryfocus)] -darkcolor [list focus $colors(entryfocus)]
-            
+
             ttk::style element create Entry.field image \
                 [list $I(entry-n) {focus} $I(entry-a) {readonly disabled} $I(entry-rd) \
                      {readonly pressed} $I(entry-d) {focus readonly} $I(entry-d) readonly $I(entry-d) ] \
                 -border {3 3 3 3} -sticky ew
-            
+
             ## Combobox.
             ttk::style element create Combobox.downarrow image \
                 [list $I(comboarrow-n) focus $I(comboarrow-af) disabled $I(comboarrow-d) \
@@ -231,7 +231,7 @@ foreach t { blue mint green purple sand pink grey } \
             ttk::style layout TNotebook.Tab {Notebook.tab -children { Notebook.label -side left}}
 
             ## Labelframes.
-            ttk::style element create Labelframe.border image $I(labelframe) -border 4 -sticky news 
+            ttk::style element create Labelframe.border image $I(labelframe) -border 4 -sticky news
             ttk::style configure TLabelframe -padding 4
 
             ## Scrollbars.

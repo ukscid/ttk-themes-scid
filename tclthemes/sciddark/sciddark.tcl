@@ -36,7 +36,7 @@ foreach t { blue mint green sand purple grey } \
         set t $::tks
         proc LoadImages {color {patterns {*.png}}} {
             set themedir [file join [file dirname [info script]] scid]
-            foreach imgdir [list $themedir $themedir$color] { 
+            foreach imgdir [list $themedir $themedir$color] {
                 foreach pattern $patterns {
                     foreach file [glob -directory $imgdir $pattern] {
                         set img [file tail [file rootname $file]]
@@ -48,13 +48,13 @@ foreach t { blue mint green sand purple grey } \
             }
             return [array get images]
         }
-        
+
         variable I
         array set I [LoadImages $t *.png]
-	
+
         variable colors
         array set colors {
-            background     "#35363a"    
+            background     "#35363a"
             lighter        "#8c8c8c"    darkest        "#18192d"
             dark           "#292a2f"    darker         "#9e9e9e"
             selectbg       "#454649"    selectfg       "#fcfcfc"
@@ -115,7 +115,7 @@ foreach t { blue mint green sand purple grey } \
                      !focus white] \
                 ;
            ttk::style configure Error.TEntry -foreground #ff2020
- 
+
             ## Treeview.
             ttk::style element create Treeheading.cell image \
                 [list $I(tree-n) \
@@ -125,7 +125,7 @@ foreach t { blue mint green sand purple grey } \
                      active $I(tree-h) \
                     ] \
                 -border 4 -sticky ew
-            
+
             ttk::style configure Row -background $colors(background)
             ttk::style configure Treeview -fieldbackground $colors(fieldbg) -background $colors(fieldbg) \
                 -selectbackground $::bgct -selectforeground $colors(selectfg)
@@ -139,7 +139,7 @@ foreach t { blue mint green sand purple grey } \
                     Button.label
                 } }
             } }
-   
+
             ttk::style element create button image \
                 [list $I(button-n) \
                      {pressed active} $I(button-pa) active $I(button-a) \
@@ -202,7 +202,7 @@ foreach t { blue mint green sand purple grey } \
                      {focus readonly} $I(entry-d) readonly $I(entry-d) \
                     ] \
                 -border 3 -sticky nsew
-            
+
             ## Combobox.
             ttk::style element create Combobox.downarrow image \
                 [list $I(comboarrow-n) focus $I(comboarrow-af) \
@@ -249,7 +249,7 @@ foreach t { blue mint green sand purple grey } \
 
             ## Labelframes.
             ttk::style element create Labelframe.border image $I(labelframe) \
-                -border 4 -sticky news 
+                -border 4 -sticky news
             ttk::style configure TLabelframe -padding 4
 
             ## Scrollbars.
