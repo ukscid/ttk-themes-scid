@@ -1,0 +1,17 @@
+*.o
+*.a
+*.lo
+*.la
+*.so
+*.obj
+*.d
+*.zip
+Makefile
+Makefile.bak
+
+*~
+*.swp
+*.swo
+\#*\#
+.\#*
+*.patch
