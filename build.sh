@@ -16,5 +16,5 @@ cp -p -R tclthemes/scidlight ScidLightTheme
 zip -r scidlighttheme_V$version.zip ScidLightTheme
 rm -rf ScidLightTheme
 cd iconthemes
-zip -r ../scidDarkIcon$version.zip darkicons readme.md
+zip -r ../scidDarkIcons_V$version.zip darkicons readme.md
 cd ..
