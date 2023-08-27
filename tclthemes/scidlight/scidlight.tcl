@@ -76,7 +76,7 @@ foreach t { blue mint green purple sand pink grey } \
                 -selectbackground   $::bgct \
                 -activebackground   $::bgct \
                 -activeforeground   $colors(selectfg) \
-                -disabledforeground $colors(lighter) \
+                -disabledforeground $colors(disabledfg) \
                 -insertcolor        $colors(text) \
                 -arrowcolor         $::bgct \
                 -selectcolor        red \
@@ -102,7 +102,7 @@ foreach t { blue mint green purple sand pink grey } \
             ::styleOption scid$t *Menu.activeBackground $::bgct
             ::styleOption scid$t *Menu.activeForeground $colors(selectfg)
             ::styleOption scid$t *Menu.background $colors(background)
-            ::styleOption scid$t *Menu.disabledForeground $colors(lighter)
+            ::styleOption scid$t *Menu.disabledForeground $colors(disabledfg)
             ::styleOption scid$t *Menu.foreground $colors(text)
             ::styleOption scid$t *Menu.selectColor red
 
