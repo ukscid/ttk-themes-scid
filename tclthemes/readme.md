@@ -1,3 +1,7 @@
+### scid tcl themes - Copyright (C) 2023 Uwe Klimmek
+### Available under the BSD-like 2-clause Tcl License as described in LICENSE in this folder
+############################################################################################
+
 Installation of scidthemes for Scid
 ===================================
 
@@ -8,4 +12,4 @@ Menu -> Options -> Resources -> Theme(s) File : select pkgIndex.tcl from this di
 Menu -> Options -> Theme : select one theme of the themes
 
 That's it.
-The main menu bar updates the colors after restart of Scid.
+The main menu bar uses the colors after restart of Scid.
