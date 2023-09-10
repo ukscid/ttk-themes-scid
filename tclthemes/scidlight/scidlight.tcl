@@ -151,6 +151,21 @@ foreach t { blue mint green purple sand pink grey } \
                 -width 20 -sticky w
             ttk::style map TCheckbutton -background [list active $colors(frame)]
 
+            ## Switchbuttons.
+            ttk::style element create Switch.indicator image \
+                [list $I(switch-off) {disabled selected} $I(switch-off) \
+                     disabled $I(switch-off) {pressed selected} $I(switch-on) \
+                     pressed $I(switch-off) {active selected} $I(switch-on) \
+                     active $I(switch-off) selected $I(switch-on) ] \
+                -width 42 -sticky w
+            ttk::style layout Switch.TCheckbutton {
+                Switch.padding -children {
+                    Switch.indicator -side left -sticky e
+                    Switch.label -side right -expand true -sticky w
+                }
+            }
+#            ttk::style map TSwitchbutton -background [list active $colors(frame)]
+
             ## Radiobuttons.
             ttk::style element create Radiobutton.indicator image \
                 [list $I(radio-nu) {disabled selected} $I(radio-dc) disabled $I(radio-du) \
@@ -177,7 +192,7 @@ foreach t { blue mint green purple sand pink grey } \
             ttk::style element create Toolbutton.border image \
                 [list $I(blank) pressed $I(toolbutton-p) {selected active} $I(toolbutton-pa) \
                      selected $I(toolbutton-p) active $I(toolbutton-a) disabled $I(blank)] \
-                -border 11 -sticky nsew
+                -border 11 -padding {6 6} -sticky nsew
 
             ## Entry widgets.
             ttk::style configure TEntry -padding {0 2 0 2 } -insertwidth 1 \
