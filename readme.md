@@ -7,6 +7,6 @@ See installation guide in the packages.
 The themes can also be used in other tcl/tk applications.
 
 ## Examples
-[![image](tclthemes/scid_screenshot1.png)]
+![image](tclthemes/scid_screenshot1.png)
 
-[![image](tclthemes/scid_screenshot2.png)]
+![image](tclthemes/scid_screenshot2.png)
